@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const cors = require('cors');
+
 
 app.use(express.json());
+app.use(cors());
 
 // Rota de calculo do valor das parcelas e juros
 app.post('/calcularParcelas', (req, res) => {
